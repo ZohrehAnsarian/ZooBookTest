@@ -23,10 +23,10 @@ namespace ZoobookTest.WebApi.Test
         public void GetAll_WhenCalled_ReturnsOkResult()
         {
             //Act
-            var result = _employeeController.GetAll() as ObjectResult;
+            var result = _employeeController.GetAll() as List<EmployeeDto>;
 
             //Assert
-            Assert.IsType<ObjectResult>(result as ObjectResult);
+            Assert.IsType<List<EmployeeDto>>(result as List<EmployeeDto>);
         }
         [Fact]
         public void GetAll_WhenCalled_ReturnsAllEmployees()
